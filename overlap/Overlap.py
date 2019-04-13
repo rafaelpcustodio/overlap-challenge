@@ -35,11 +35,7 @@ class Overlap(object):
 
     # fixing descending input
     def fix_inputs(self, line = []) -> list:
-        if line[0] > line[1]:
-            value_to_pass = line[0]
-            line[0] = line[1]
-            line[1] = value_to_pass
-        return line
+        return sorted(line)
 
     def execute_overlap(self, line1, line2) -> bool:
         return self.check_overlap_x_axis(line1, line2)
