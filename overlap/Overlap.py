@@ -9,7 +9,6 @@ class Overlap(object):
         if not first_line or not second_line or len(first_line) > self.FIXED_LINE_RANGE + 1 or len(second_line) > self.FIXED_LINE_RANGE + 1:
             print('You probably passed at least one wrong input. You must pass 2 points with 2 values each. Try again. ')
             return False
-            # both are ascending points
 
         if not self.validate_ascending_order(first_line):
             first_line = self.fix_inputs(first_line)
